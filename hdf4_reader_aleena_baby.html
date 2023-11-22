@@ -21,10 +21,12 @@
 					<section class="banner style1 orient-left content-align-left image-position-right halfscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h2 style="color: blue;"><strong>HDF4 reader for KOSMA-tau PDR model</strong> </h2>
-                            <ul class="actions Default">
+                            <ul class="actions stacked">
 								<li><a href="index.html" class="button primary fas fa-home" > Home</a></li>
                                 <li><a href="https://aleenababy.github.io/aleena.baby/projects.html#Modeling%20of%20Photo-dissociated%20regions"
                                     class="button primary smooth-scroll-middle" style="background-color: #6949ebd2;">Academic website</a></li>
+                                    <li><a href="https://github.com/KOSMAsubmm/HDF4_reader_for_KOSMA_tau"
+                                        class="button primary fas fa-github" style="background-color: #6949ebd2;">Github</a></li>
 							</ul>
 						</div>
                         <div class="image">
@@ -41,51 +43,30 @@
                                 <section>
                                     <div class="content">
                                         <h3>The problem</h3>    
-                                        <p style="color: black; text-align: just">Molecular clouds are the birth place of stars in the Galaxy
-                                            When a star forms it will irradiate the clouds nearby. PDRs are regions where interstellar gas and
-                                             dust are exposed to intense ultraviolet radiation, often near massive stars. 
-                                             Physics and chemistry of this regions will be influenced by the
-                                              radiation from the star.
-                                             Understanding the physical and chemical processes within these regions is crucial 
-                                             for astrophysical research. The transport of molecules, atoms, ions, energy, or momentum
-                                              influence the chemistry and physics of the medium. Quantifying this transport is essential
-                                               for understanding the underlying physical conditions in a molecular cloud.
+                                        <p style="color: black; text-align: just"> The main goal of this project is to read the
+                                             hdf4 file into a pandas dataframe which can be used to understand the physics of the
+                                              model. The HDF4 output file from the KOSMA-Tau PDR model have some hardcoded values
+                                               which are not reccomendend. However, the routine takes care of the hardcoded values
+                                                and try to allow you have flexibility whenever possible.
                                            </p>
                         
-                                        <h3>Project goals</h3>
-                                        <p>
-                                            <ol>
-                                                <li>Incorporate a systematic diffusion model into the <a href="https://astro.uni-koeln.de/riechers/research/kosma-tau">
-                                                    <span style="color: #601703;"> KOSMA-tau PDR model</span></a>.
-                                                    <ul>
-                                                        <li>interpolation model</li>
-                                                        <li>calculate the diffusion rates in a adaptive mesh</li>
-                                                        <li>diffusion model</li>
-                                                    </ul>
-
-                                                </li>
-                                                <li>
-                                                    In order to anlyse the results, I created: 
-                                                    <ul>
-                                                        <li>
-                                                            Chemistry analyser tool
-                                                        </li>
-                                                        <li>
-                                                            Chemical network model 
-                                                        </li>
-                                                        <li>
-                                                            HDF4 reader for KOSMA-tau 
-                                                        </li>
-                                                        <li>
-                                                            New output system using HDF5 for KOSMA-tau 
-                                                        </li>
-                                                        <li>
-                                                            HDF5 reader for KOSMA-tau 
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ol>
-                                        </p>
+                                           <h2>Pre-requisites: </h2>
+                                           <p>The following are the pre-requisit programs:
+                                               <ul>
+                                                   <li> for reading HDF4 file using python
+                                                       <ul><li><a href="https://pypi.org/project/pyhdf/">pyhdf</a></li></ul>
+                                                   </li>
+                                                   <li> to create the dataframes
+                                                       <ul>
+                                                           <li><a href="https://numpy.org">Numpy</a></li>
+                                                       <li> <a href="https://pandas.pydata.org">Pandas</a></li>
+                                                       </ul>
+                                                   </li>
+                                                   <li> for plotting the file
+                                                       <ul><li><a href="https://matplotlib.org">Matplotlib</a></li></ul>
+                                                   </li>
+                                               </ul>
+                                           </p>
                                     </div>
                                 </section>
                             </div>
