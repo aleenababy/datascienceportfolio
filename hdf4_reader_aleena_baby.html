@@ -20,13 +20,12 @@
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right halfscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h2 style="color: blue;"><strong>HDF4 reader for KOSMA-tau PDR model</strong> </h2>
-                            <ul class="actions stacked">
-								<li><a href="index.html" class="button primary fas fa-home" > Home</a></li>
-                                <li><a href="https://aleenababy.github.io/aleena.baby/projects.html#Modeling%20of%20Photo-dissociated%20regions"
-                                    class="button primary smooth-scroll-middle" style="background-color: #6949ebd2;">Academic website</a></li>
-                                    <li><a href="https://github.com/KOSMAsubmm/HDF4_reader_for_KOSMA_tau"
-                                        class="button primary fas fa-github" style="background-color: #6949ebd2;">Github</a></li>
+							<h2><strong>A deep dive into HDF4 files from the KOSMA-Tau PDR Model</strong> </h2>
+							<h3>Bridging astrophysics and data science</h3>
+                            <ul class="actions Default">
+								<li><a href="index.html#My projects" class="button primary fas fa-home" style="background-color: #040010d2;" > Home</a></li>
+                                <li><a href="https://github.com/KOSMAsubmm/HDF4_reader_for_KOSMA_tau"
+                                        class="button primary fas fa-code" style="background-color: rgba(16, 11, 0, 0.824);"> Github</a></li>
 							</ul>
 						</div>
                         <div class="image">
@@ -42,32 +41,160 @@
                             <div class="box">
                                 <section>
                                     <div class="content">
-                                        <h3>The problem</h3>    
-                                        <p style="color: black; text-align: just"> The main goal of this project is to read the
-                                             hdf4 file into a pandas dataframe which can be used to understand the physics of the
-                                              model. The HDF4 output file from the KOSMA-Tau PDR model have some hardcoded values
-                                               which are not reccomendend. However, the routine takes care of the hardcoded values
-                                                and try to allow you have flexibility whenever possible.
-                                           </p>
-                        
-                                           <h2>Pre-requisites: </h2>
-                                           <p>The following are the pre-requisit programs:
-                                               <ul>
-                                                   <li> for reading HDF4 file using python
-                                                       <ul><li><a href="https://pypi.org/project/pyhdf/">pyhdf</a></li></ul>
-                                                   </li>
-                                                   <li> to create the dataframes
-                                                       <ul>
-                                                           <li><a href="https://numpy.org">Numpy</a></li>
-                                                       <li> <a href="https://pandas.pydata.org">Pandas</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li> for plotting the file
-                                                       <ul><li><a href="https://matplotlib.org">Matplotlib</a></li></ul>
-                                                   </li>
-                                               </ul>
-                                           </p>
+                                
+                                    <h3>Objective</h3>
+									<p>
+                                        The primary goal of this project is to develop a robust HDF4 file 
+                                        reader routine to extract, analyze, and visualize critical data from
+                                         the KOSMA-Tau PDR model, shedding light on the intricate physics
+                                          governing molecular clouds.
+                                    </p>
+                                    <h3>Key features: </h3>
+									<dl>
+                                        <dt>Dynamic Handling of Hardcoded Values:</dt>
+                                        <dd>
+                                            <p>The routine dynamically manages and addresses hardcoded values in HDF4 files, ensuring adaptability and flexibility in the analysis process.</p>
+                                        </dd>
+                                        <dt>Data Loading and Exploration:</dt>
+                                        <dd>
+                                            <p>Showcase your proficiency in using the pyhdf library to load and explore scientific datasets. Print dataset names, dimensions, and provide insights into the structure of the HDF4 files.</p>
+                                        </dd>
+                                        <dt>Pandas Dataframe Creation:</dt>
+                                        <dd>
+                                            <p>Transform the raw scientific data into a Pandas dataframe, making it accessible and ready for in-depth analysis.</p>
+                                        </dd>
+                                        <dt>Data Manipulation and Exploration:</dt>
+                                        <dd>
+                                            <p>Perform operations on the loaded data, such as statistical analysis, filtering, and exploration of multi-dimensional datasets. Highlight your ability to extract meaningful insights from complex astrophysical data.</p>
+                                        </dd>
+                                        <dt>Data Visualization:</dt>
+                                        <dd>
+                                            <p>Utilize Matplotlib to create compelling visualizations that communicate the patterns and trends within the molecular cloud data. Visualizations could include temperature distributions, abundance variations, or any other relevant astrophysical parameters.</p>
+                                        </dd>
+                                    </dl>
+
+									<h3>Technologies used: </h3>
+                                        <ul>
+                                            <li> for reading HDF4 file using python
+                                                <ul><li><a href="https://pypi.org/project/pyhdf/"><span style="color: #760505;">pyhdf</span></a></li></ul>
+                                            </li>
+                                            <li> to create the dataframes
+                                                <ul>
+                                                    <li><a href="https://numpy.org"><span style="color: #760505;">Numpy</span></a></li>
+                                                <li><a href="https://pandas.pydata.org"><span style="color: #760505;">Pandas</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li> for plotting the file
+                                                <ul><li><a href="https://matplotlib.org"><span style="color: #760505;">Matplotlib</span></a></li></ul>
+                                            </li>
+                                        </ul>
                                     </div>
+									<h2>Loading the data</h2>
+									<p>The scientific dataset is read using the <code>SD</code> module from the <code>pyhdf</code>.
+                                    To access the SD API a python program can say one of:</p>
+                                    <section>
+										<div class="content">
+											<pre><code>import pyhdf.SD        # must prefix names with "pyhdf.SD."
+from pyhdf import SD   # must prefix names with "SD."
+from pyhdf.SD import * # names need no prefix                                       
+</code></pre>
+</div>
+									</section>
+                                    To read the dataset from the file,
+                                    <section>
+										<div class="content">
+											<pre><code>hdf = SD.SD(/path/to/the/file/file.hdf)
+dataset = hdf.datasets()
+print (dataset)                             
+</code></pre>
+</div>
+									</section>
+                                    
+                                    This will print the name of all the datasets available in the file.
+									<hr class="major" />
+
+									<h2>Reading the data using pyhdf</h2>
+									<p>
+                                        To read a specific dataset use the name of the dataset, as shown below:
+                                    </p>
+                                    <div>
+                                        <pre><code>sds = hdf.select('Depth::Temp::Abundances').get()
+                                        </code></pre>
+                                    </div>
+                                    The sds array have all the data in the dataset <code>'Depth::Temp::Abundances'</code>. Once the data is loaded using <code>.get()</code>,
+                                     you can split the data like <code>sds[2,:]</code> or <code>sds[2:10,32:45]</code>. HDF4 can store data in multiple (more than two) dimensions.
+
+                                    <hr class="major" />
+
+									<h2>Creating the dataframe</h2>
+									<p>
+                                        With all the essential datasets successfully loaded, the next pivotal step in our data science journey is to transform this raw scientific data into a structured and easily navigable format - a Pandas dataframe.
+                                        Within the HDF4 file, the data is organized with depth in the cloud serving as the columns and individual molecules as the rows. The HDF4 file's index reveals the name of each molecule in the <code>CTRL_IND</code>, a crucial mapping provided alongside the HDF4 output file.
+
+                                        To achieve this transformation, the routine delves into the <code>CTRL_IND</code> file, meticulously tracking the association between the molecule name and its corresponding index. The iterator <code>it</code> becomes a guiding force, representing the index number corresponding to the numerical shell in the model. While the code snippet presented here showcases only a few key parameters, it's important to note that the original file encompasses more than 15 columns and over 300 rows per molecule.
+                                    </p>
+                                    <div>
+                                        <pre><code>rows = []
+for molecule_name, abund, depth in zip(molecule, abundances, depths):
+    for it, ab in enumerate(abund):
+        mol = molecule.index(molecule_name)
+        rows.append({"it":it, "gas_temp": tg[it],  "dust_temp": td[it], \
+				"molecule":molecule_name, "depth":depths[it], 'Av':av[it], "abund":ab]})
+df = pd.DataFrame(rows)        
+                                        </code></pre>
+                                    </div>
+                                    This elegant piece of code efficiently constructs a Pandas dataframe, encapsulating the richness of astrophysical data in a structured and accessible form.
+                                    Before delving into the complexities of data analysis, the routine ensures that missing values are appropriately handled, setting them to 'nan' for clarity and precision.
+                                    <hr class="major" />
+
+									<h2>Plotting different parameters using Matplotlib</h2>
+									<p>Armed with our Pandas dataframe brimming with insightful data, we turn our attention to the analytical phase.</p>
+                                    <div>
+                                        <pre><code>def plot_abundance_profile(df, sp):
+    fig = plt.figure(figsize = (9,6.9)) # creating a figure and axes environments
+    ax = fig.add_subplot(111)            
+    ax.set_xlabel('r [$\\rm{pc}$]', fontsize = 18) # xlabel 
+    xlim = [1.0e-4,df.depth.unique[-1]] # limits of the x axis, upper-limit is set to the highest value in the depth column.
+    ax.set_xlim(xlim) # lower limit of the x-axis is set by the physical characteristics.
+    ax.set_ylabel('$n_i/n$', fontsize = 18) # y-label
+    ax.semilogx(df[df.molecule == sp].depth,\
+                df[df.molecule == sp]['abund'],'-',\
+                    linewidth = 2.5, label = sp_name) # the name of the species is shown in the label
+    ax.legend(loc = 'lower left', frameon = False, fontsize = 14) # legends
+    fig.tight_layout()
+    return (fig) 
+                                        </code></pre>
+                                    </div>
+                                    <p>This concise code snippet illustrates the process of plotting the abundance profile for a specific species, enhancing our ability to visually interpret and communicate the nuances within the astrophysical data. The resulting figure provides a clear and informative visualization, laying the foundation for further exploration and scientific understanding. 
+                                        <a href="https://aleenababy.github.io/aleena.baby/"> <span style="color: #2f35f2;">Link to the Github repositiory</span> </a>
+                                    </p>
+
+                                    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+										<div class="content">
+											<h2>Reults and insights</h2>
+											In the rich tapestry of astrophysical data unveiled through our analysis, the figures presented offer profound insights into the abundance patterns of various species within the molecular cloud. As we traverse from the left to the right on the visual representation, we embark on a journey from the outer edges of the cloud's surface to its central core.
+
+										</div>
+										<div class="image">
+											<img src="images/gallery/thumbs/no_diffusion_abundance_color.png" alt="" />
+										</div>
+										
+									</section>
+									<p>The significance of this spatial transition becomes increasingly evident, illuminating a fundamental aspect of molecular cloud dynamics. Notably, the figure reveals a compelling narrative of the abundance distribution, showcasing that atomic hydrogen predominates at the cloud's surface. Conversely, as we delve deeper into the cloud's core, molecular hydrogen emerges as the prevailing species, forming a crucial component of the intricate molecular cloud ecosystem.</p>
+                                        
+                                    <p> This distinct shift from atomic to molecular hydrogen signifies a precise transition point. Beyond its inherent scientific intrigue, this transition point plays a pivotal role in the meticulous calculation of the molecular hydrogen mass. Understanding this transition provides key insights into the complex interplay of forces within the molecular cloud, shedding light on the processes that govern its formation and evolution.</p>
+                                        
+                                    <p> In essence, the presented figure not only captures the beauty of abundance variations within the molecular cloud but also serves as a visual gateway to the precise delineation of the atomic-to-molecular hydrogen transition point. These insights pave the way for a deeper understanding of the molecular cloud's composition, offering valuable contributions to the broader field of astrophysics and enhancing our comprehension of the intricate dynamics that shape these cosmic entities.</p>
+                                    
+									
+									<h2>Conclusion</h2>
+                                        
+                                    <p> In conclusion, our exploration into the realms of astrophysics through the lens of the KOSMA-Tau PDR model has been a fascinating journey. By developing a robust HDF4 file reader routine and leveraging the power of Python's data science ecosystem, we've unraveled the complexities of molecular clouds. From dynamically handling hardcoded values to meticulously mapping molecule names, our routine ensures adaptability and precision in the analysis process.</p>
+                                        
+                                    <p> The resulting Pandas dataframe opens a window into the spatial distribution of species abundance within the molecular cloud. As we traverse from surface to core, a poignant transition from atomic to molecular hydrogen emerges, offering profound insights into the molecular cloud's composition. Our visualizations not only capture the beauty of astrophysical data but also illuminate critical transition points, guiding us in calculating the molecular hydrogen mass.
+                                         This project stands as a testament to the intersection of astronomy and data science, unlocking the secrets encoded in HDF4 files and contributing to our broader understanding of the Galaxies</p>
+                                        
+                                </section>
                                 </section>
                             </div>
 
