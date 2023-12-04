@@ -72,7 +72,7 @@
                                             <p>Utilize Matplotlib to create compelling visualizations that communicate the patterns and trends within the molecular cloud data. Visualizations could include temperature distributions, abundance variations, or any other relevant astrophysical parameters.</p>
                                         </dd>
                                     </dl>
-
+                                    <hr class="major" />
 									<h3>Technologies used: </h3>
                                         <ul>
                                             <li> for reading HDF4 file using python
@@ -89,7 +89,8 @@
                                             </li>
                                         </ul>
                                     </div>
-									<h2>Loading the data</h2>
+                                    <hr class="major" />
+									<h3>Loading the data</h3>
 									<p>The scientific dataset is read using the <code>SD</code> module from the <code>pyhdf</code>.
                                     To access the SD API a python program can say one of:</p>
                                     <section>
@@ -113,7 +114,7 @@ print (dataset)
                                     This will print the name of all the datasets available in the file.
 									<hr class="major" />
 
-									<h2>Reading the data using pyhdf</h2>
+									<h3>Reading the data using pyhdf</h3>
 									<p>
                                         To read a specific dataset use the name of the dataset, as shown below:
                                     </p>
@@ -126,7 +127,7 @@ print (dataset)
 
                                     <hr class="major" />
 
-									<h2>Creating the dataframe</h2>
+									<h3>Creating the dataframe</h3>
 									<p>
                                         With all the essential datasets successfully loaded, the next pivotal step in our data science journey is to transform this raw scientific data into a structured and easily navigable format - a Pandas dataframe.
                                         Within the HDF4 file, the data is organized with depth in the cloud serving as the columns and individual molecules as the rows. The HDF4 file's index reveals the name of each molecule in the <code>CTRL_IND</code>, a crucial mapping provided alongside the HDF4 output file.
@@ -147,7 +148,7 @@ df = pd.DataFrame(rows)
                                     Before delving into the complexities of data analysis, the routine ensures that missing values are appropriately handled, setting them to 'nan' for clarity and precision.
                                     <hr class="major" />
 
-									<h2>Plotting different parameters using Matplotlib</h2>
+									<h3>Plotting different parameters using Matplotlib</h3>
 									<p>Armed with our Pandas dataframe brimming with insightful data, we turn our attention to the analytical phase.</p>
                                     <div>
                                         <pre><code>def plot_abundance_profile(df, sp):
@@ -168,17 +169,15 @@ df = pd.DataFrame(rows)
                                     <p>This concise code snippet illustrates the process of plotting the abundance profile for a specific species, enhancing our ability to visually interpret and communicate the nuances within the astrophysical data. The resulting figure provides a clear and informative visualization, laying the foundation for further exploration and scientific understanding. 
                                         <a href="https://aleenababy.github.io/aleena.baby/"> <span style="color: #2f35f2;">Link to the Github repositiory</span> </a>
                                     </p>
-
+                                    <hr class="major" />
                                     <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 										<div class="content">
-											<h2>Reults and insights</h2>
+											<h3>Results and insights</h3>
 											In the rich tapestry of astrophysical data unveiled through our analysis, the figures presented offer profound insights into the abundance patterns of various species within the molecular cloud. As we traverse from the left to the right on the visual representation, we embark on a journey from the outer edges of the cloud's surface to its central core.
-
 										</div>
 										<div class="image">
-											<img src="images/gallery/thumbs/no_diffusion_abundance_color.png" alt="" />
+											<img src="images/gallery/thumbs/abundance.jpeg" alt="" />
 										</div>
-										
 									</section>
 									<p>The significance of this spatial transition becomes increasingly evident, illuminating a fundamental aspect of molecular cloud dynamics. Notably, the figure reveals a compelling narrative of the abundance distribution, showcasing that atomic hydrogen predominates at the cloud's surface. Conversely, as we delve deeper into the cloud's core, molecular hydrogen emerges as the prevailing species, forming a crucial component of the intricate molecular cloud ecosystem.</p>
                                         
@@ -186,8 +185,8 @@ df = pd.DataFrame(rows)
                                         
                                     <p> In essence, the presented figure not only captures the beauty of abundance variations within the molecular cloud but also serves as a visual gateway to the precise delineation of the atomic-to-molecular hydrogen transition point. These insights pave the way for a deeper understanding of the molecular cloud's composition, offering valuable contributions to the broader field of astrophysics and enhancing our comprehension of the intricate dynamics that shape these cosmic entities.</p>
                                     
-									
-									<h2>Conclusion</h2>
+									<hr class="major" />
+									<h3>Conclusion</h3>
                                         
                                     <p> In conclusion, our exploration into the realms of astrophysics through the lens of the KOSMA-Tau PDR model has been a fascinating journey. By developing a robust HDF4 file reader routine and leveraging the power of Python's data science ecosystem, we've unraveled the complexities of molecular clouds. From dynamically handling hardcoded values to meticulously mapping molecule names, our routine ensures adaptability and precision in the analysis process.</p>
                                         
