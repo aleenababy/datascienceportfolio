@@ -20,7 +20,8 @@
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right halfscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h2 style="color: blue;"><strong>Chemical reaction rate visualization</strong> </h2>
+							<h2 style="color: blue;"><strong>Dynamic Kinetics Analysis: Unveiling Chemical Reaction Rates through Data-driven Insights</strong> </h2>
+                            <ul class="actions Default">
                             <ul class="actions Default">
 								<li><a href="index.html#My projects" class="button primary fas fa-home" style="background-color: #040010d2;" > Home</a></li>
                                 <li><a href="https://github.com/KOSMAsubmm/HDF4_reader_for_KOSMA_tau"
@@ -29,7 +30,7 @@
 						</div>
                         <div class="image">
 							<img src="images/gallery/thumbs/H_dest_zoomedout.jpeg" 
-                            alt="destruction of hydrogen" />
+                            alt="waste management" />
 						</div>
                         
 					</section>
@@ -40,78 +41,234 @@
                             <div class="box">
                                 <section>
                                     <div class="content">
-                                        <h3>The problem</h3>    
-                                        <p style="color: black; text-align: just">
+                                
+                                    <h3>Objective</h3>
+									<p>
                                         The chemistry results from the KOSMA-tau PDR model is written as ASCII file.
                                         In order to understand the chemical structure of the PDR, different chemical reactions
                                         which forms and destroys the species need to be understood. You have been provided with an 
                                         ASCII file containing chemical reaction rates over time. The goal is to 
                                         leverage the Pandas library in Python to read the data from the ASCII file,
                                          create a DataFrame, and visualize the chemical reaction rates over time.
-                                        </p>
-                        
-                                        <h3>Project goals</h3>
-                                        <ol>
-                                            <li>
-                                              <h4>Data Ingestion:</h4>
-                                              <ul>
-                                                <li>Utilize the Pandas library to read the the ASCII file from the <a href="https://astro.uni-koeln.de/riechers/research/kosma-tau">
-                                                    <span style="color: #601703;"> KOSMA-tau PDR model</span></a>, which includes time-series data for chemical reaction rates.</li>
-                                                    <li> Inspect and understand the structure of the data, including column names, data types, and any potential challenges.</li>
-                                              </ul>
+                                    </p>
+                                    <h3>Project goals: </h3>
+									<ol>
+                                        <li>
+                                          <h4>Data Ingestion:</h4>
+                                          <ul>
+                                            <li>Utilize the Pandas library to read the the ASCII file from the <a href="https://astro.uni-koeln.de/riechers/research/kosma-tau">
+                                                <span style="color: #601703;"> KOSMA-tau PDR model</span></a>, which includes time-series data for chemical reaction rates.</li>
+                                                <li> Inspect and understand the structure of the data, including column names, data types, and any potential challenges.</li>
+                                          </ul>
+                                        </li>
+                                    
+                                        <li>
+                                          <h4>DataFrame Creation:</h4>
+                                          <ul>
+                                            <li>Create a Pandas DataFrame to organize and manipulate the chemical reaction rate data efficiently.</li>
+                                            <li> Handle any missing or erroneous values to ensure the integrity of the dataset.</li> 
+                                          </ul>
+                                        </li>
+                                    
+                                        <li>
+                                          <h4>Data Visualization:</h4>
+                                          <ul>
+                                            <li>Utilize a suitable plotting library (e.g., Matplotlib or Seaborn) to generate a visual representation of the chemical reaction rates over time.</li>
+                                            <li>Design the plot to include informative labels, titles, and any other elements that enhance the interpretability of the visualization.</li>
+                                          </ul>
+                                        </li>
+                                    
+                                        <li>
+                                          <h4>Analysis and Interpretation:</h4>
+                                          <ul>
+                                            <li>Perform a basic analysis of the plotted data, identifying trends, peaks, or any significant patterns in the chemical reaction rates.</li>
+                                            <li> Summarize your findings in a brief report, highlighting key observations and insights gained from the visualization.</li></ul>
+                                        </li>
+                                      </ol>
+                                    <hr class="major" />
+									<h3>Technologies used: </h3>
+                                        <ul>
+                                            <li> to create the dataframes
+                                                <ul>
+                                                    <li><a href="https://numpy.org"><span style="color: #760505;">Numpy</span></a></li>
+                                                <li><a href="https://pandas.pydata.org"><span style="color: #760505;">Pandas</span></a></li>
+                                                </ul>
                                             </li>
-                                        
-                                            <li>
-                                              <h4>DataFrame Creation:</h4>
-                                              <ul>
-                                                <li>Create a Pandas DataFrame to organize and manipulate the chemical reaction rate data efficiently.</li>
-                                                <li> Handle any missing or erroneous values to ensure the integrity of the dataset.</li> 
-                                              </ul>
+                                            <li> for plotting the file
+                                                <ul><li><a href="https://matplotlib.org"><span style="color: #760505;">Matplotlib</span></a></li></ul>
                                             </li>
-                                        
-                                            <li>
-                                              <h4>Data Visualization:</h4>
-                                              <ul>
-                                                <li>Utilize a suitable plotting library (e.g., Matplotlib or Seaborn) to generate a visual representation of the chemical reaction rates over time.</li>
-                                                <li>Design the plot to include informative labels, titles, and any other elements that enhance the interpretability of the visualization.</li>
-                                              </ul>
-                                            </li>
-                                        
-                                            <li>
-                                              <h4>Analysis and Interpretation:</h4>
-                                              <ul>
-                                                <li>Perform a basic analysis of the plotted data, identifying trends, peaks, or any significant patterns in the chemical reaction rates.</li>
-                                                <li> Summarize your findings in a brief report, highlighting key observations and insights gained from the visualization.</li></ul>
-                                            </li>
-                                          </ol>
+                                        </ul>
+                                        <h3>Deliverables:</h3>
+                                        <ul>
+                                            <li>Python script and Jupyter Notebook containing the code for reading the ASCII file, creating the DataFrame, and generating the plot.</li>
+                                            <li>A well-documented report summarizing the analysis of the chemical reaction rates, supported by the generated visualization.</li>
+                                        </ul>
                                     </div>
-                                </section>
-                                <section>
-                                    <h3>Deliverables:</h3>
-                                    <ul>
-                                        <li>Python script and Jupyter Notebook containing the code for reading the ASCII file, creating the DataFrame, and generating the plot.</li>
-                                        <li>A well-documented report summarizing the analysis of the chemical reaction rates, supported by the generated visualization.</li>
-                                    </ul>
-                                </section>
-                            
-                                <section>
-                                    <div class="content">
-                                        <h3>Loading the data</h3>
-                                        <p>The ASCII is read using the <code>Pandas</code> module in <code>Python</code>.
+                                    <hr class="major" />
+									<h3>Loading the data</h3>
+									<p>The ASCII is read using the <code>Pandas</code> module in <code>Python</code>.
                                         To import <code>Pandas</code> and other neccessary modules:</p>
                                         <section>
-                                            <div class="content">
-                                                <pre><code>import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt                                          
+										<div class="content">
+											<pre><code>import numpy as np                               
+import pandas as pd
+import matplotlib.pyplot as plt
 </code></pre>
 </div>
+									</section>
+                                    To read the data from the ASCII file,
+                                    <section>
+										<div class="content">
+											<pre><code>f = /path/to/the/file/file.hdf
+df = pd.read_fwf(f, header = None)                             
+</code></pre>
+</div>
+									</section>
+                                    The data from the file looks as the following.
+                                    <section>
+                                        <div class="content">
+                                            <pre><code>
+    0             1
+    0       ==============================================...           NaN
+    1                ITER =  -1   MSTP =   1   T =  1.000E+02           NaN
+    2       ELECTR          =  1.149E+00     REL. TO XNTOT...           NaN
+    3                    5 FASTEST OF  40 FORMATION REACTIONS           NaN
+    4       C              PHOTON          --> C+         ...  5.584000e-12
+    ...                                                   ...           ...
+    295437  H3+            13C18O          --> H13C18O+   ...  7.145000e-17
+    295438  HE+            13C18O          --> 18O        ...  1.165000e-17
+    295439  C+             13C18O          --> 13C+       ...  6.704000e-18
+    295440  H13CO+         13C18O          --> H13C18O+   ...  3.796000e-18
+    295441         TOTAL DESTRUCTION RATE =         3.361E-16           NaN
+    
+    [295442 rows x 2 columns]
+                                            </code></pre>
+                                        </div>
+                                    </section>
+                                    <hr class="major" />
 
+									<h3>Read data into DataFrame</h3>
+                                    <h4>Segmenting the Data based on Positions:</h4>
+									<p>
+                                        <!--The resulting DataFrame should encompass key details, including position, species, 
+                                        formation/destruction reactions, and corresponding rates. Upon initial examination, 
+                                        it is evident that the delimiter repeats for each position within the cloud. 
+                                        Therefore, pinpointing the positions of these delimiters is crucial for segmenting the entire
+                                         dataset based on positions. Subsequently, at each identified position, the data must be further
+                                          divided into distinct species.-->
+                                          The first step involves recognizing the repeating delimiters for each position within the chemical cloud. Identifying these delimiters is pivotal for accurately segmenting the entire dataset based on positions. The following code snippet accomplishes this task:
+                                    </p>
+                                    <div>
+                                        <pre><code>delimiter = df[0][0]
+split = df[df[0] == delimiter].index.values
+                                        </code></pre>
                                     </div>
+                                    <h4>Determining the Last Position:</h4>
+                                    To pinpoint the last position in the model, we use the following code:
+                                    <div>
+                                        <pre><code>line = df[0][split[-2]+1] # find the index of the last position from split
+if 'ITER =  -1   MSTP =' in line:
+    last_shell = int(line.split()[5]) # find the last position 
+print('last shell is positioned at', last_shell)
+    else:
+print('could not find the last shell correctly')
+                                        </code></pre>
+                                    </div>
+                                    <h4>Splitting Data into Species:</h4>
+                                    Once the positions are identified, the data is further divided into distinct species. The code below demonstrates how to achieve this:
+                                    Once the index of the positions are identified, split the data into different species.
+                                    In order to identify different species we can check for <code>REL. TO XNTOT</code> in the data and split between species.
+                                    <div>
+                                        <pre><code>sp_n = df_split[df_split[0].str.contains('REL. TO XNTOT')].index.values # species list
+                                        </code></pre>
+                                    </div>
+                                    <h4>Partitioning Data into Formation and Destruction Categories:</h4>
+                                    After determining the indices of the species, the data should be partitioned into formation and destruction
+                                     categories for each species. To distinguish between formation and destruction reactions, the script can search for occurrences of
+                                    <code>FORMATION REACTION</code> or <code>DESTRUCTION REACTION</code> within the data (<code>df_form_dest = df_split.loc[sp_n[species_index]:sp_n[species_index +1]]</code>) and separate them accordingly, based on the identified species. Additionally, the script can extract the total destruction rate and total formation rate for each species.
+                                    <div>
+                                        <pre><code>form_split = df_form_dest[df_form_dest[0].str.contains('FORMATION REACTION')].index.values[0] # formation of the species
+tot_f_split =df_form_dest[df_form_dest[0].str.contains('TOTAL FORMATION RATE')].index.values[0] #total formation rate
+dest_split = df_form_dest[df_form_dest[0].str.contains('DESTRUCTION REACTION')].index.values[0] #destruction reactions of th species
+tot_d_split = df_form_dest[df_form_dest[0].str.contains('TOTAL DESTRUCTION RATE')].index.values[0] # total destruction of the species
+                                        </code></pre>
+                                    </div>
+                                    Once the data is split into formation and destruction reactions, the reactions and rates are saved to a dataframe.
+                                    <hr class="major" />
+
+									<h3>Creating the dataframe</h3>
+									<p>
+                                        With all the data successfully sparsed, the next pivotal step in our data science journey is to 
+                                        transform this raw scientific data into a structured and easily navigable format - a Pandas dataframe.
+                                        The chemical reactions and rates can be stored as illustrated in the code snippet:
+
+                                    <div>
+                                        <pre><code>lines = df_form_dest[0].loc[form_split+1 : tot_f_split-1]
+rates = df_form_dest[1].loc[form_split+1 : tot_f_split-1]
+total_f = float(df_form_dest[0].loc[tot_f_split].split()[-1])
+for line, rate in zip(lines, rates):
+    if '==>' in line:
+        line = 'diffusion'
+    form_row.append({'molecule':species, 'pos':ind+1, 'reac': line, \
+                                        'form_rate':rate, 'total_form_rate':total_f, \
+                                        'per_form_rate':float(rate)/float(total_f)})
+                                        </code></pre>
+                                    </div>
+                                    The <code>diffusion</code> reaction is indicated using <code>==></code> which is replaced with <code>diffusion</code> in the dataframe.
+                                    This elegant piece of code efficiently constructs a Pandas dataframe, encapsulating the richness of astrophysical data in a structured and accessible form.
+                                    Before delving into the complexities of data analysis, the routine ensures that missing values are appropriately handled, setting them to 'nan' for clarity and precision.
+                                    <hr class="major" />
+
+									<h3>Plotting different parameters using Matplotlib</h3>
+									<p>Armed with our Pandas dataframe brimming with insightful data, we turn our attention to the analytical phase.
+                                         The code snippet to plot the destruction reaction rates of <code>spe_name</code>.</p>
+                                    <div>
+                                        <pre><code>fig = plt.figure(figsize = (10,7))
+ax = fig.add_subplot(111)
+ax.set_title(spe_name)
+ax.set_xlabel('position index')
+ax.set_ylabel('destruction rate [$cm^{-3}s^{-1}$] ')
+for reac, table_reac in  chem_dest[chem_dest.molecule == spe_name].groupby(["reac"]):
+    ax.semilogy(table_reac.pos, table_reac.dest_rate, linewidth = 2, label = check_reac(reac))
+ax.legend( bbox_to_anchor = (1.01, 1), loc = 'upper left', fontsize = 14, borderaxespad = 0.)
+ax.label_outer()
+fig.tight_layout()
+                                        </code></pre>
+                                    </div>
+                                    <p>This concise code snippet illustrates the process of plotting the abundance profile for a specific species, enhancing our ability to visually interpret and communicate the nuances within the astrophysical data. The resulting figure provides a clear and informative visualization, laying the foundation for further exploration and scientific understanding. 
+                                        <a href="https://aleenababy.github.io/aleena.baby/"> <span style="color: #2f35f2;">Link to the Github repositiory</span> </a>
+                                    </p>
+                                    <hr class="major" />
+                                    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+										<div class="content">
+											<h3>Results and insights</h3>
+											In the rich tapestry of astrophysical data unveiled through our analysis, the figures presented offer profound insights into the abundance patterns of various species within the molecular cloud. As we traverse from the left to the right on the visual representation, we embark on a journey from the outer edges of the cloud's surface to its central core.
+										</div>
+										<div class="image">
+											<img src="images/gallery/thumbs/abundance.jpeg" alt="" />
+										</div>
+									</section>
+									<p>The significance of this spatial transition becomes increasingly evident, illuminating a fundamental aspect of molecular cloud dynamics. Notably, the figure reveals a compelling narrative of the abundance distribution, showcasing that atomic hydrogen predominates at the cloud's surface. Conversely, as we delve deeper into the cloud's core, molecular hydrogen emerges as the prevailing species, forming a crucial component of the intricate molecular cloud ecosystem.</p>
+                                        
+                                    <p> This distinct shift from atomic to molecular hydrogen signifies a precise transition point. Beyond its inherent scientific intrigue, this transition point plays a pivotal role in the meticulous calculation of the molecular hydrogen mass. Understanding this transition provides key insights into the complex interplay of forces within the molecular cloud, shedding light on the processes that govern its formation and evolution.</p>
+                                        
+                                    <p> In essence, the presented figure not only captures the beauty of abundance variations within the molecular cloud but also serves as a visual gateway to the precise delineation of the atomic-to-molecular hydrogen transition point. These insights pave the way for a deeper understanding of the molecular cloud's composition, offering valuable contributions to the broader field of astrophysics and enhancing our comprehension of the intricate dynamics that shape these cosmic entities.</p>
+                                    
+									<hr class="major" />
+									<h3>Conclusion</h3>
+                                        
+                                    <p> In conclusion, our exploration into the realms of astrophysics through the lens of the KOSMA-Tau PDR model has been a fascinating journey. By developing a robust HDF4 file reader routine and leveraging the power of Python's data science ecosystem, we've unraveled the complexities of molecular clouds. From dynamically handling hardcoded values to meticulously mapping molecule names, our routine ensures adaptability and precision in the analysis process.</p>
+                                        
+                                    <p> The resulting Pandas dataframe opens a window into the spatial distribution of species abundance within the molecular cloud. As we traverse from surface to core, a poignant transition from atomic to molecular hydrogen emerges, offering profound insights into the molecular cloud's composition. Our visualizations not only capture the beauty of astrophysical data but also illuminate critical transition points, guiding us in calculating the molecular hydrogen mass.
+                                         This project stands as a testament to the intersection of astronomy and data science, unlocking the secrets encoded in HDF4 files and contributing to our broader understanding of the Galaxies</p>
+                                        
+                                </section>
                                 </section>
                             </div>
+
                         </div>
                     </section>
+                    
             
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
