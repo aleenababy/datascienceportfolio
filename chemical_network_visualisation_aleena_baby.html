@@ -18,7 +18,7 @@
 			<div id="wrapper" class="divided">
 
 				<!-- One -->
-					<section class="banner style3 orient-left content-align-left image-position-center halfscreen onload-image-fade-in onload-content-fade-right">
+					<section class="banner style1 orient-left content-align-left image-position-center halfscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h2 style="color: blue;"><strong>Chemical network visualization</strong> </h2>
                             <ul class="actions Default">
@@ -30,8 +30,8 @@
                         <div class="image">
 							<!--<img src="images/gallery/thumbs/carbon_network_setrnbeg94.png" 
                             alt="waste management" />-->
-                            <iframe src="chemchk_network_all_circular.html" 
-                            width="520" height="340" frameborder="0"></iframe>
+                            <iframe src="chemchk_network_all_kamada_new.html" 
+                            width="520" height="340" frameborder="2"></iframe>
 
 						</div>
                         
@@ -43,28 +43,24 @@
                                 <section>
                                     <div class="content">   
                                         <p style="color: black; text-align: just">
-                                            <strong>
                                                 I developed a chemical network tool capable of parsing ASCII files to 
                                                 extract chemical reactions from the model. It transforms these reactions
                                                 into reactants, products, and nodes. The pipeline is designed to process
                                                  hdf5 output from the KOSMA-tau PDR model. The ultimate objective is to
                                                   generate a comprehensive chemical network that links the species formed
                                                    and destroyed through various chemical reactions.
-                                            </strong>
+                                        
                                            </p>
                         
                                         <h2> Data Extraction </h2>
                                         The data from the ASCII file is read using Pandas to a dataframe.
                                         <div class="content">
-											<pre><code>
-                                        
-                                                def load_ascii_file(file_name):
-                                                    '''
-                                                    Load the file using Pandas
-                                                    '''
-                                                    df = pd.read_fwf(f, header = None)
-                                                    return (df)
-                                            
+											<pre><code>def load_ascii_file(file_name):
+'''
+Load the file using Pandas
+'''
+df = pd.read_fwf(f, header = None)
+return (df)
                                             </code></pre>
 
 										</div>
