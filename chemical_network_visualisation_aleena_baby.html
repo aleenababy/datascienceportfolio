@@ -44,16 +44,17 @@
                                     <div class="content">   
                                         <p style="color: black; text-align: just">
                                                 I developed a chemical network tool capable of parsing ASCII files to 
-                                                extract chemical reactions from the model. It transforms these reactions
+                                                extract chemical reactions from the KOSMA-tau PDR model. It transforms these reactions
                                                 into reactants, products, and nodes. The pipeline is designed to process
-                                                 hdf5 output from the KOSMA-tau PDR model. The ultimate objective is to
+                                                 hdf5 or ASCII output from the KOSMA-tau PDR model. The ultimate objective is to
                                                   generate a comprehensive chemical network that links the species formed
                                                    and destroyed through various chemical reactions.
-                                        
                                            </p>
-                        
-                                        <h2> Data Extraction </h2>
+                    
+                                        <h4> Data Extraction </h4>
                                         The data from the ASCII file is read using Pandas to a dataframe.
+										A detailed explanation of data extraction is given: <a href="chemical_reaction_rate_aleena_baby.html">here.</a>
+										Once you have the <code>formation</code> and <code>destruction</code> dataframes.
                                         <div class="content">
 											<pre><code>def load_ascii_file(file_name):
 '''
