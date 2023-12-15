@@ -54,25 +54,64 @@
                                         <h4> Data Extraction </h4>
                                         The data from the ASCII file is read using Pandas to a dataframe.
 										A detailed explanation of data extraction is given: <a href="chemical_reaction_rate_aleena_baby.html">here.</a>
-										Once you have the <code>formation</code> and <code>destruction</code> dataframes.
+										Once you have the <code>formation</code> and <code>destruction</code> dataframes, you can extract the individual 
+										reactions and split them to create different nodes and edges.
                                         <div class="content">
-											<pre><code>def load_ascii_file(file_name):
-'''
-Load the file using Pandas
-'''
-df = pd.read_fwf(f, header = None)
-return (df)
-                                            </code></pre>
+											<pre><code># Extracting individual reactions and creating nodes and edges
+list_reac = set(formation.reac.unique()).union(destruction.reac.unique())
+list_of_nodes = set()
+list_of_edges = []
 
+for item in list_reac:
+	# Check if the reaction involves 'diffusion'
+	if 'diffusion' not in item:
+		# Splitting reactants and products
+		reactants, products = item.split('-->')
+
+		# Removing 'PHOTON' and 'CRPHOT' from reactants and products
+		reactants = set(reactants.split()) - {'PHOTON', 'CRPHOT'}
+		products = set(products.split()) - {'PHOTON', 'CRPHOT'}
+
+		# Updating the set of nodes with reactants and products
+		list_of_nodes.update(reactants | products)
+
+		# Creating edges for reactants and products
+		if len(reactants) > 1:
+			list_of_edges.append(list(reactants))
+		if len(products) > 1:
+			list_of_edges.append(list(products))
+		
+		# Creating an additional edge connecting the last reactant and last product
+		list_of_edges.append([list(reactants)[-1]], [list(products)[-1]])
+                                            </code></pre>
 										</div>
-                                        <h2> Data Loading </h2>
-                                        <head>
-                                            
-                                          </head>
-                                          <body>
-                                            <py-script>
-                                              print("Hello World")
-                                            </py-script>
+	<p>The code begins by forming a set, list_reac, which combines unique reactions from both the 
+		formation and destruction dataframes. It then iterates through this set, excluding reactions
+		 involving <code>diffusion.</code> For each reaction, it splits the reactants and products, 
+		 removing <code>PHOTON</code> and <code>CRPHOT</code> from both sets. The code updates a set
+		  of nodes, list_of_nodes, with the distinct elements from reactants and products. Additionally,
+		   it constructs a list of edges, list_of_edges, by appending reactants and products with more than
+		    one element. An extra edge is generated, connecting the last reactant with the last product in
+			 each reaction. The final outcome is a structured representation of the chemical reactions in terms
+			  of nodes and edges, facilitating the subsequent creation of a visual graph for comprehensive
+			   data interpretation.</p>
+	
+	<p>The provided code snippet addresses the incorporation of diffusion as an additional reaction for al
+		 species in a chemical network. This is achieved by adding a self-loop to each species, visually 
+		 represented in the subsequent code block. </p>
+									<div class="content">
+										<pre><code>for sp in list_of_nodes:
+	list_of_edges.append([sp, sp])
+										</code></pre>
+									</div>
+	<p>The loop iterates through each species in the set list_of_nodes. For each species <code>(sp)</code>, 
+		a self-loop edge is appended to the list of edges, denoted by <code>[sp, sp]</code>. This simple yet 
+		effective implementation ensures that the diffusion process is properly accounted for in the 
+		chemical network graph. The self-loop visually signifies the presence of diffusion for 
+		each species, enhancing the clarity of the graphical representation and aiding in the 
+		comprehensive analysis of the chemical system. </p>
+                                        <h4> Data Loading </h4>
+
                                     </div>
                                 </section>
                             </div>
