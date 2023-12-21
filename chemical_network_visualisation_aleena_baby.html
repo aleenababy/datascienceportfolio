@@ -27,11 +27,11 @@
                                     class="button primary smooth-scroll-middle" style="background-color: #6949ebd2;">Academic website</a></li>
 							</ul>
 						</div>
-                        <div class="image">
+                        <div class="image" >
 							<!--<img src="images/gallery/thumbs/carbon_network_setrnbeg94.png" 
                             alt="waste management" />-->
                             <iframe src="chemchk_network_all_kamada_new.html" 
-                            width="520" height="340" frameborder="2"></iframe>
+                            width="100%" height="340" frameborder="2"></iframe>
 
 						</div>
                         
@@ -53,7 +53,7 @@
                     
                                         <h4> Data Extraction </h4>
                                         The data from the ASCII file is read using Pandas to a dataframe.
-										A detailed explanation of data extraction is given: <a href="chemical_reaction_rate_aleena_baby.html">here.</a>
+										A detailed explanation of data extraction is given: <a href="chemical_reaction_rate_aleena_baby.html"><span style="color: rgb(255, 123, 0);">here.</span></a>
 										Once you have the <code>formation</code> and <code>destruction</code> dataframes, you can extract the individual 
 										reactions and split them to create different nodes and edges.
                                         <div class="content">
@@ -110,8 +110,27 @@ for item in list_reac:
 		chemical network graph. The self-loop visually signifies the presence of diffusion for 
 		each species, enhancing the clarity of the graphical representation and aiding in the 
 		comprehensive analysis of the chemical system. </p>
-                                        <h4> Data Loading </h4>
 
+		<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h3> Network of individual species </h3>
+				<p>To visualize the network of individual species in my data science portfolio, there are two effective approaches.
+					Firstly, utilize the <code>select</code> option located at the top of the field. This option displays all species involved in the formation or destruction reactions of the selected species, providing a convenient way to explore the network.
+				</p>
+				<ul class="actions stacked">
+					<li><a href="chemchk_network_all_kamada_select.html" class="button">Try it</a></li>
+				</ul>
+			</div>
+			<div class="image" width="10%" height="340">
+				<img src="images/chemchk_vis_select.jpeg" alt="" />
+			</div>
+		</section>
+		Alternatively, you can employ the following code snippet as an alternative to <code>list_reac = set(formation.reac.unique()).union(destruction.reac.unique())</code>:
+		<br>
+										<div class="content">
+											<pre><code>list_reac = set(formation[formation.molecule == sp].reac.unique()).union(destruction[destruction.molecule == sp].reac.unique())</code></pre>
+										</div>
+										This alternative code serves the same purpose, offering flexibility and options for exploring species networks within the context of chemical reactions.
                                     </div>
                                 </section>
                             </div>
