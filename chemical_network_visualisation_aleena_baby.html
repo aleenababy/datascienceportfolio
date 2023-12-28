@@ -131,13 +131,41 @@ for item in list_reac:
 							<img src="images/chemchk_vis_select.jpeg" alt="" />
 						</div>
 					</section>
-					Alternatively, you can employ the following code snippet as an alternative to <code>list_reac = set(formation.reac.unique()).union(destruction.reac.unique())</code> (<code>species</code> is the desired species):
-					<br>
+					Alternatively, you can employ the following code snippet as an alternative to <code>list_reac = set(formation.reac.unique()).union(destruction.reac.unique())</code> (<code>species</code> is the desired species).
+					This alternative code serves the same purpose, offering flexibility and options for exploring species networks within the context of chemical reactions.
+							With the code snippet, one can concentrate on the <code>species</code> and it's formation and destruction.
+							<br><br>
 							<div class="content">
-								<pre><code>list_reac = set(formation[formation.molecule == species].reac.unique()).union(destruction[destruction.molecule == species].reac.unique())</code></pre>
+								<pre><code>list_reac_form = formation[formation.molecule == species].reac.unique()
+list_reac_dest = destruction[destruction.molecule == species].reac.unique()
+list_reac = set(list_reac_form).union(list_reac_dest)</code></pre>
 							</div>
-							This alternative code serves the same purpose, offering flexibility and options for exploring species networks within the context of chemical reactions.
-						</div>
+							The Python script comprises two distinct functions: <code>chemchk_vis_all_species()</code> and <code>chemchk_vis_individ_species(species)</code>. 
+							These functions serve distinct purposes within a chemical network analysis.
+							<ul>
+								<li>
+								  <strong>chemchk_vis_all_species():</strong>
+								  <ul>
+									<li><strong>Functionality:</strong> Visualizes the entire chemical network.</li>
+									<li><strong>Usage:</strong> Call this function to generate a comprehensive visualization that encompasses all species and their interactions within the chemical network.</li>
+								  </ul>
+								</li>
+								<li>
+								  <strong>chemchk_vis_individ_species(species):</strong>
+								  <ul>
+									<li><strong>Functionality:</strong> Visualizes the chemical network specific to a given species.</li>
+									<li><strong>Parameters:</strong>
+									  <ul>
+										<li><code>species</code> (str): The target species for which the chemical network will be visualized.</li>
+									  </ul>
+									</li>
+									<li><strong>Usage:</strong> Provide the target species as an argument to this function, and it will generate a focused visualization showcasing interactions involving only the specified species.</li>
+								  </ul>
+								</li>
+							  </ul>
+							  
+							These functions enhance the modularity and clarity of the codebase, allowing users to choose between a holistic view of the entire chemical network or a detailed exploration of
+							 a specific species' interactions. This structure facilitates ease of use and customization, making the script adaptable to various analysis requirements.
 					</section>
 				</div>        
             
