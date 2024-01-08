@@ -11,8 +11,7 @@ Welcome to my Data Science Portfolio! 🚀 Here, you'll find a collection of pro
 ### 2. **Model: Diffusion effects in the photodissociation region**
    - Developed a mathematical model to understand the impact of diffusion of molecules in the physics and chemistry of the molecular cloud.
 
-### 3. **Developing a data-driven model for waste management optimization
-**
+### 3. **Developing a data-driven model for waste management optimization**
    - This project's core aim is to tackle waste management challenges by employing advanced data science techniques for the analysis and optimization of waste management practices within our local community in Berlin, addressing the evolving needs of our growing population and consumption trends.
 
 ### 4. **Analyzing Air Quality in Gurugram Using Machine Learning**
